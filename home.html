@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Riter</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<div class="navbar">
+  <a href="home.html"><img src="Logo.png" width="200" length="200"></a>
+  <a href="#downloads">Downloads</a>
+  <a href="#uniqueness">Uniqueness</a>
+  <a href="#team">Meet the Team</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<body>
+
+  </div>
+  
+  <div class="w-full h-full flex justify-center items-center">
+    <h1 id="typewriter" class="text-4xl font-bold"></h1>
+    <script>
+      const words = ["For students.", "By Students."];
+      let i = 0;
+      let j = 0;
+      let currentWord = "";
+      let isDeleting = false;
+      
+      function type() {
+        currentWord = words[i];
+        if (isDeleting) {
+          document.getElementById("typewriter").textContent = currentWord.substring(0, j-1);
+          j--;
+          if (j == 0) {
+            isDeleting = false;
+            i++;
+            if (i == words.length) {
+              i = 0;
+            }
+          }
+        } else {
+          document.getElementById("typewriter").textContent = currentWord.substring(0, j+1);
+          j++;
+          if (j == currentWord.length) {
+            isDeleting = true;
+          }
+        }
+        setTimeout(type, 150);
+      }
+      
+      type();
+    </script>
+
+  <br>
+  <h4>Accessible, <b>free application helper</b> to aid students for TOP universities.</h4>
+  <h4>Providing help and support to students around the world.</h4>
+  <br>
+  <h4>Created by: Kashyap, Akshit, Sean, and Eason</h4>
+  <br><br><br><br>
+
+  <br><br><br><hr>
+  <div id="downloads">
+  <h1>Downloads:</b></h1>
+  <p>Here you can find all the latest downloads available for Riter.</p>
+  </div>
+
+    <div class="button -container">
+      <button class="btn">Windows</button>
+      <button class="btn">Mac</button>
+    </div>
+
+    <script>
+      function download(platform) {
+        if (platform === 'Windows') {
+          var link = document.createElement('a');
+          link.href = 'path/to/your/windows-file.exe'; 
+          link.download = 'windows-file.exe'; 
+          link.click();
+        } else if (platform === 'Mac') {
+          var link = document.createElement('a');
+          link.href = 'path/to/your/mac-file.dmg'; 
+          link.download = 'mac-file.dmg'; 
+          link.click(); 
+        }
+      }
+    </script>
+
+  <br><br><br><hr>
+  <div id="uniqueness">
+  <h1>Uniqueness:</b></h1>
+  </div>
+
+  <table>
+    <tr>
+      <td>
+        <img src="2.png" width="300" height="150">
+        <td>
+          <h3>Riter ensures that all users information is completely private, <br>as all information is processed locally on user's own personal <br>computer, away from potential hackers.</h3>
+        </td>
+      </td>
+      <td>
+        <img src="3.png" width="300" height="150">
+      </td>
+      <td>
+        <h3>Accessibility to a majority of popular operating systems, including: Windows & Mac Support. With Linux development occurring in the future.</h3>
+      </td>
+      </tr>
+      <tr>
+      <td>
+        <img src="4.png" width="300" height="150">
+      </td>
+      <td>
+        <h3>Free of Cost Program. Our main goals is to create support for all students to succeed. We hope to always keep it cheap to use for all future purposes.</h3>
+      </td>
+      <td>
+        <img src="5.png" width="300" height="150">
+      </td>
+      <td>
+        <h3>Uniqueness of Idea. We provide personalized answer with user information input! Very intuitive interface to use for beginners of all ages to use!</h3>
+      </td>
+    </tr>
+  </table>
+
+
+  <br><br><br><hr>
+  <div id="team">
+  <h1>Meet the Team!</h1>
+  </div>
+  <table class="center">
+    <tr>
+      <td>
+        <img src="sean.jpg" width="300" height="400">
+        <p>Sean Nie</p>
+      </td>
+      <td>
+        <img src="kashyap.jpg" width="300" height="400">
+        <p>Kashyap Sukshavasi</p>
+      </td>
+      <td>
+        <img src="akshit.jpg" width="300" height="400">
+        <p>Akshit Erukulla</p>
+      </td>
+      <td>
+        <img src="eason.jpg" width="300" height="400">
+        <p>Eason Yang</p>
+      </td>
+    </tr>
+  </table>
+  
+  <br><br><br><hr>
+  <div id="contact">
+  <h1>Questions or Concerns?</h1>
+  <p>Please contact us at riterhelp@gmail.com and we'd be happy to respond to your concerns! :D</p>
+  </div>
+</body>
+</html>
